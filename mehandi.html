@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Mehandi Hisar | Best Bridal & Arabic Designs</title>
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary-color: #d35400;
+            --secondary-color: #fdf2e9;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #a04000;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1612336307429-8a898d10e223?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+
+        /* About Section */
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .about-content p {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        /* Services & Pricing */
+        .services {
+            background: var(--secondary-color);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .price-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-bottom: 4px solid var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .price-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .price-card h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .price-list {
+            text-align: left;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .price-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .price-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #2c3e50;
+            color: var(--white);
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .contact-info,
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+        }
+
+        .contact-item a {
+            color: #f39c12;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        form button:hover {
+            background: #a04000;
+        }
+
+        /* Footer */
+        footer {
+            background: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .navbar {
+                flex-wrap: wrap;
+            }
+
+            .navbar .cta-btn {
+                display: block;
+            }
+
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">✨ Royal Mehandi Hisar</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="cta-btn">Book Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Best Mehandi Artist in Hisar</h1>
+            <p>Exclusive Bridal, Arabic & Simple Mehandi for all occasions</p>
+            <p>Starting from just <strong>₹499</strong></p>
+            <a href="#contact" class="cta-btn" style="margin-top: 20px; font-size: 1.2rem; display: inline-block;">Book
+                Appointment</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+            <p>Hello! I am a professional Mehandi artist serving <strong>Hisar City</strong> and nearby areas. I
+                specialize in creating beautiful, long-lasting Mehandi designs for <strong>Weddings, Engagements, Karwa
+                    Chauth, Festivals, and Parties</strong>.</p>
+            <p>I use 100% natural henna powder to ensure dark color and no skin irritation. Whether you want a simple
+                design or heavy bridal art, I have options for every budget.</p>
+            <p>✅ Home Service Available in Hisar<br>✅ Natural & Chemical-Free Henna<br>✅ All Age Groups Welcome</p>
+        </div>
+    </section>
+
+    <!-- Services & Pricing -->
+    <section id="services" class="section services">
+        <h2 class="section-title">Services & Price List</h2>
+        <div class="pricing-grid">
+            <!-- Card 1 -->
+            <div class="price-card">
+                <h3>Simple / Festival</h3>
+                <div class="price">₹499 - ₹999</div>
+                <ul class="price-list">
+                    <li>Simple Arabic Design</li>
+                    <li>Rounded Hands</li>
+                    <li>Minimalist Pattern</li>
+                    <li>Quick Service</li>
+                </ul>
+            </div>
+            <!-- Card 2 -->
+            <div class="price-card">
+                <h3>Medium / Party</h3>
+                <div class="price">₹1,000 - ₹2,500</div>
+                <ul class="price-list">
+                    <li>Floral Arabic Design</li>
+                    <li>One Side Peacock</li>
+                    <li>Bollywood Style</li>
+                    <li>Front & Back Hands</li>
+                </ul>
+            </div>
+            <!-- Card 3 -->
+            <div class="price-card">
+                <h3>Bridal Special</h3>
+                <div class="price">₹3,000 - ₹8,000+</div>
+                <ul class="price-list">
+                    <li>Full Hands & Feet (Gharelu)</li>
+                    <li>Heavy Floral Bridal</li>
+                    <li>Customized Dulhan Design</li>
+                    <li>Engagement Special</li>
+                </ul>
+            </div>
+            <!-- Card 4 -->
+            <div class="price-card">
+                <h3>Kids / Adults</h3>
+                <div class="price">₹299 - ₹799</div>
+                <ul class="price-list">
+                    <li>Cartoon Characters</li>
+                    <li>Simple Finger Art</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="section">
+        <h2 class="section-title">My Work</h2>
+        <div class="gallery-grid">
+            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=400&q=80"
+                alt="Mehandi Design" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1516974068527-c04560903246?auto=format&fit=crop&w=400&q=80"
+                alt="Bridal Mehandi" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1599694364870-d2c24344097e?auto=format&fit=crop&w=400&q=80"
+                alt="Arabic Design" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1629196914168-3a9644337cf1?auto=format&fit=crop&w=400&q=80"
+                alt="Feet Mehandi" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?auto=format&fit=crop&w=400&q=80"
+                alt="Bridal Hands" class="gallery-img">
+            <img src="https://images.unsplash.com/photo-1583391726247-1d5839f76d9e?auto=format&fit=crop&w=400&q=80"
+                alt="Mehandi Art" class="gallery-img">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <h2 class="section-title" style="color: white;">Contact & Booking (Hisar)</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Get in Touch</h3>
+                <p style="margin-bottom: 20px; margin-top: 10px;">Book your appointment today! I visit homes, hotels,
+                    and parlors in Hisar.</p>
+
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>Your Full Address, Hisar, Haryana</span>
+                </div>
+                <div class="contact-item">
+                    <span>📞</span>
+                    <a href="tel:+919999999999">+91 98765 43210</a>
+                </div>
+                <div class="contact-item">
+                    <span>📧</span>
+                    <span>email@example.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>🕐</span>
+                    <span>Open: 9:00 AM - 8:00 PM</span>
+                </div>
+
+                <div
+                    style="margin-top: 20px; width: 100%; height: 150px; background: #ddd; display: flex; align-items: center; justify-content: center; border-radius: 5px;">
+                    <p style="color: #333;">📍 Google Map - Hisar City</p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Book Appointment</h3>
+                <form onsubmit="return false;">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <input type="text" placeholder="Service Type (Bridal/Party/Simple)">
+                    <input type="date" placeholder="Preferred Date">
+                    <textarea rows="4" placeholder="Your Message / Address"></textarea>
+                    <button type="submit" onclick="alert('Thank you! We will contact you soon.')">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>✨ Royal Mehandi Hisar</p>
+        <p>📞 +91 98765 43210 | 📍 Hisar City, Haryana</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">© 2024 All Rights Reserved</p>
+    </footer>
+
+</body>
+
+</html>

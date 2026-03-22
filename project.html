@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeServe Pro - AC/Fridge Repair On Demand</title>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.2/socket.io.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal active">
+        <div class="modal-content">
+            <div class="logo">
+                <i class="fas fa-tools"></i>
+                <h1>HomeServe Pro</h1>
+            </div>
+            <div class="role-selector">
+                <button id="userBtn" class="role-btn active">
+                    <i class="fas fa-user"></i> Customer
+                </button>
+                <button id="mechanicBtn" class="role-btn">
+                    <i class="fas fa-wrench"></i> Mechanic
+                </button>
+            </div>
+            <form id="loginForm">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+                <input type="email" id="email" placeholder="Email (optional)">
+                <input type="text" id="skills" class="mechanic-only" placeholder="Skills (AC, Fridge, etc.)">
+                <button type="submit" class="submit-btn">
+                    <span id="loginText">Get Started</span>
+                    <div class="spinner hidden"></div>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main App -->
+    <div id="app" class="hidden">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="user-info">
+                <i class="fas fa-user"></i>
+                <span id="userName"></span>
+            </div>
+            <div class="status" id="statusIndicator">
+                <span>Online</span>
+                <div class="status-dot online"></div>
+            </div>
+        </div>
+
+        <!-- User Dashboard -->
+        <div id="userDashboard" class="dashboard">
+            <div class="map-container">
+                <div id="map"></div>
+                <div class="map-overlay">
+                    <button id="locateBtn" class="btn primary">
+                        <i class="fas fa-location-arrow"></i> Locate Me
+                    </button>
+                    <select id="serviceType">
+                        <option value="AC Repair">AC Repair</option>
+                        <option value="Fridge Repair">Fridge Repair</option>
+                        <option value="AC Installation">AC Installation</option>
+                        <option value="AC Cleaning">AC Cleaning</option>
+                    </select>
+                    <button id="requestBtn" class="btn primary large">
+                        Request Service Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="nearby-section">
+                <h3>Nearest Mechanics</h3>
+                <div id="mechanicsList" class="mechanics-grid"></div>
+            </div>
+        </div>
+
+        <!-- Mechanic Dashboard -->
+        <div id="mechanicDashboard" class="dashboard hidden">
+            <div class="status-toggle">
+                <button id="goOnline" class="btn success">Go Online</button>
+                <button id="goOffline" class="btn danger hidden">Go Offline</button>
+            </div>
+
+            <div id="requestsContainer">
+                <h3>Pending Requests</h3>
+                <div id="requestsList"></div>
+            </div>
+
+            <div id="activeJob" class="job-card hidden">
+                <h3>Active Job</h3>
+                <div id="jobDetails"></div>
+                <button id="completeJob" class="btn success">Mark Complete</button>
+            </div>
+        </div>
+
+        <!-- Tracking Modal -->
+        <div id="trackingModal" class="modal hidden">
+            <div class="modal-content tracking">
+                <div class="tracking-header">
+                    <h2>Your Mechanic is Coming!</h2>
+                    <div id="mechanicInfo">
+                        <div class="mechanic-avatar"></div>
+                        <div>
+                            <h3 id="mechanicName"></h3>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <span id="mechanicRating"></span>
+                            </div>
+                            <a id="mechanicPhone" href="#" class="phone-link">
+                                <i class="fas fa-phone"></i> Call Mechanic
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="trackingMap"></div>
+                <div class="eta">
+                    <h4>ETA: <span id="etaTime">--</span></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
