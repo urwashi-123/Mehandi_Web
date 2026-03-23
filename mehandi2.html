@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riwaaz Mehandi Hisar | Best Bridal Mehandi Artist</title>
+    <style>
+        :root {
+            --primary-color: #d35400;
+            --secondary-color: #eef5f4;
+            --text-color: #333;
+            --white: #faf3f3;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-transform: uppercase;
+        }
+
+        img.logo {
+            width: 40px !important;
+            height: 40px !important;
+            object-fit: cover;
+            margin-right: 10px;
+            margin-top: -3px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        .cta-btn {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .cta-btn:hover {
+            background: #a04000;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('bridalmehandi.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero-img {
+            width: 250px;
+            max-width: 90%;
+            height: auto;
+            border-radius: 15px;
+            margin: 15px auto;
+            display: block;
+            border: 3px solid var(--white);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+
+        /* About Section */
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Services */
+        .services {
+            background: var(--secondary-color);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .price-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-bottom: 4px solid var(--primary-color);
+            transition: transform 0.3s;
+        }
+
+        .price-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .price-list li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .price-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        /* BRIDAL SECTION */
+        .bridal-section {
+            background: linear-gradient(135deg, #fdf2e9 0%, #f8e8d5 100%);
+        }
+
+        .bridal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .bridal-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .bridal-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .bridal-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .bridal-content {
+            padding: 20px;
+        }
+
+        .bridal-name {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        /* MY GALLERY - Upload Section */
+        .upload-section {
+            background: var(--secondary-color);
+        }
+
+        .upload-area {
+            background: white;
+            border: 3px dashed var(--primary-color);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .upload-area:hover {
+            background: #f8f9fa;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: #f8f9fa;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .stars {
+            color: #f39c12;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .client-name {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-top: 10px;
+        }
+
+        /* Contact */
+        .contact {
+            background: #2c3e50;
+            color: var(--white);
+        }
+
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .contact-info,
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1rem;
+        }
+
+        .contact-item a {
+            color: #f39c12;
+            font-weight: bold;
+        }
+
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        form button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .navbar {
+                flex-wrap: wrap;
+            }
+
+            .bridal-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="mehandilogo.png" alt="Riwaaz Mehndi" class="logo"> Riwaaz Mehndi
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#bridals">Bridal</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="cta-btn">Book Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Best Bridal Mehandi Artist in Hisar</h1>
+            <p>✨ Exclusive Designs for Weddings & Special Occasions</p>
+            <p>Starting from just <strong>₹499</strong></p>
+            <a href="#contact" class="cta-btn" style="margin-top: 20px; font-size: 1.2rem;">Book Appointment</a>
+        </div>
+    </section>
+
+    <!-- BRIDAL SECTION -->
+    <section id="bridals" class="section bridal-section">
+        <h2 class="section-title">Bridal Mehandi Designs</h2>
+        <div class="bridal-grid">
+            <div class="bridal-card">
+                <img src="mehandi1.jpeg"
+                    alt="Priya Bridal" class="bridal-img">
+                <div class="bridal-content">
+                    <h3 class="bridal-name">Priya's Wedding</h3>
+                    <p>Heavy Floral Design | Full Hands & Feet | ₹6500</p>
+                </div>
+            </div>
+            <div class="bridal-card">
+                <img src="mehandi2.jpeg"
+                    alt="Neha Bridal" class="bridal-img">
+                <div class="bridal-content">
+                    <h3 class="bridal-name">Neha's Engagement</h3>
+                    <p>Arabic Peacock Design | Front Hands | ₹3500</p>
+                </div>
+            </div>
+            <div class="bridal-card">
+                <img src="mehandi3.jpeg"
+                    alt="Riya Bridal" class="bridal-img">
+                <div class="bridal-content">
+                    <h3 class="bridal-name">Riya's Karwa Chauth</h3>
+                    <p>Traditional Rounded | Feet Design | ₹2500</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section services">
+        <h2 class="section-title">Services & Price List</h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Simple / Festival</h3>
+                <div class="price">₹499 - ₹999</div>
+                <ul class="price-list">
+                    <li>Simple Arabic Design</li>
+                    <li>Rounded Hands</li>
+                    <li>Minimalist Pattern</li>
+                </ul>
+            </div>
+            <div class="price-card">
+                <h3>Medium / Party</h3>
+                <div class="price">₹1,000 - ₹2,500</div>
+                <ul class="price-list">
+                    <li>Floral Arabic Design</li>
+                    <li>One Side Peacock</li>
+                    <li>Bollywood Style</li>
+                </ul>
+            </div>
+            <div class="price-card">
+                <h3>Bridal Special</h3>
+                <div class="price">₹3,000 - ₹8,000+</div>
+                <ul class="price-list">
+                    <li>Full Hands & Feet</li>
+                    <li>Heavy Floral Bridal</li>
+                    <li>Customized Design</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- MY GALLERY - Upload Section -->
+    <section id="gallery" class="section upload-section">
+        <h2 class="section-title">My Gallery</h2>
+        <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem;">📸 Upload Your Mehandi Photos Here</p>
+
+        <div class="upload-area" onclick="document.getElementById('fileInput').click()">
+            <div style="font-size: 3rem; margin-bottom: 20px;">📁</div>
+            <h3>Add Your Photos</h3>
+            <p>Click here to upload your Mehandi photos<br>
+                <small>Supported: JPG, PNG (Max 5MB)</small>
+            </p>
+            <input type="file" id="fileInput" multiple accept="image/*" style="display: none;"
+                onchange="handleUpload(event)">
+        </div>
+
+        <div id="uploadedPhotos"
+            style="margin-top: 30px; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px;">
+            <!-- Your uploaded photos will appear here -->
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section testimonials">
+        <h2 class="section-title">Client Reviews</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Amazing bridal mehandi! Color stayed dark for 10 days. Highly recommended for Hisar weddings."</p>
+                <div class="client-name">- Priya Sharma</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐</div>
+                <p>"Perfect Arabic design for my sister's engagement. Very professional and affordable prices."</p>
+                <div class="client-name">- Sheema Chowhan</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <p>"Best mehandi artist in Hisar! Did beautiful Karwa Chauth design. Home service was perfect."</p>
+                <div class="client-name">- Anjali Verma</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <h2 class="section-title" style="color: white;">Contact & Booking</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>📞 Call / WhatsApp Now</h3>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <a href="tel:+918168313022">+91 8168313022</a>
+                </div>
+                <div class="contact-item">
+                    <span>💬</span>
+                    <a href="https://wa.me/918168313022" target="_blank">WhatsApp Chat</a>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>Hisar City, Haryana<br>Home Service Available</span>
+                </div>
+                <div class="contact-item">
+                    <span>🕐</span>
+                    <span>9:00 AM - 6:00 PM<br>7 Days Open</span>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Quick Booking</h3>
+                <form onsubmit="return false;">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                    <input type="text" placeholder="Service (Bridal/Party/Simple)">
+                    <input type="date">
+                    <textarea rows="3" placeholder="Address & Message"></textarea>
+                    <button type="submit" onclick="alert('✅ Thank you! We will call you soon.')">Book
+                        Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/918168313022" class="whatsapp-float" target="_blank">💬</a>
+
+    <script>
+        // Photo Upload Functionality
+      //  function handleUpload(event) 
