@@ -463,6 +463,83 @@
         footer p {
             margin: 5px 0;
         }
+        /* 🔥 MOBILE UI FIX - PREMIUM LOOK */
+@media (max-width: 768px) {
+
+    /* Hero Section Fix */
+    .hero {
+        height: 55vh;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    /* Navbar Fix */
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        display: none; /* hide menu (optional) */
+    }
+
+    /* Logo alignment */
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    /* Section spacing */
+    .section {
+        padding: 40px 15px;
+    }
+
+    /* Cards (services, bridal) */
+    .bridal-grid,
+    .pricing-grid,
+    .testimonial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Images fix */
+    .bridal-img,
+    .image-card img {
+        height: 180px;
+    }
+
+    /* Upload box */
+    .upload-area {
+        padding: 20px;
+    }
+
+    /* Buttons */
+    .cta-btn,
+    .btn-primary {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Contact section */
+    .contact-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    /* WhatsApp button size */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
     </style>
 </head>
 
